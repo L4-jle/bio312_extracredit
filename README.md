@@ -1,8 +1,3 @@
----
-title: 'Gene loss among Eukarya that led to disjoint EFL1 ortholog function among species'
-disqus: hackmd
----
-
 Gene loss among Eukarya that led to disjoint EFL1 ortholog function among species
 ===
 In examining the possible gene losses that may have shifted homolog function within orthologs of the EFL1 gene family, a procedural series of bioinformatic techniques have been utilized to further understand its evolutionary history. By following this annotated repository, it is possible to replicate the findings of this study, as well as possibly apply its principles to other gene families of interest.
