@@ -1,0 +1,386 @@
+IQ-TREE 2.1.1 COVID-edition built Aug 22 2020
+
+Input file name: /home/ec2-user/labs/lab5-L4-jle/efl1/efl1.homologs.al.fas
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 725012
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 34 sequences with 1984 amino-acid sites
+Number of constant sites: 661 (= 33.3165% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 661 (= 33.3165% of all sites)
+Number of parsimony informative sites: 977
+Number of distinct site patterns: 1451
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: LG+I+G4
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+LG+I+G4          -43356.956   86847.912 - 1.13e-25   86852.668 - 9.68e-25   87222.635 +    0.877
+LG+R5            -43336.840   86819.681 - 1.53e-19   86825.337 - 8.33e-19   87227.960 +   0.0612
+LG+R4            -43344.445   86830.890 - 5.63e-22   86836.238 - 3.58e-21   87227.984 +   0.0605
+LG+R6            -43333.952   86817.903 - 3.72e-19   86823.878 - 1.73e-18   87237.368 - 0.000554
+LG+G4            -43368.794   86869.588 - 2.23e-30   86874.202 - 2.04e-29   87238.718 - 0.000282
+LG+F+I+G4        -43295.267   86762.534 - 3.93e-07   86770.422 - 7.01e-07   87243.521 - 2.56e-05
+LG+F+R4          -43281.393   86742.785 -  0.00763   86751.438 -  0.00929   87246.143 - 6.89e-06
+LG+F+R5          -43274.525   86733.049 +    0.992   86742.098 +    0.991   87247.593 - 3.34e-06
+LG+R3            -43391.064   86920.129 - 2.36e-41   86925.176 - 1.74e-40   87306.037 -  6.8e-19
+rtREV+F+I+G4     -43388.188   86948.376 - 1.73e-47   86956.264 - 3.09e-47   87429.363 - 1.13e-45
+rtREV+F+R5       -43371.338   86926.676 - 8.94e-43   86935.725 - 8.92e-43   87441.220 - 3.01e-48
+rtREV+F+R4       -43379.523   86939.045 - 1.84e-45   86947.698 - 2.24e-45   87442.404 - 1.66e-48
+WAG+I+G4         -43541.273   87216.546 - 1.02e-105   87221.302 - 8.67e-105   87591.268 - 7.86e-81
+WAG+R4           -43531.351   87204.702 - 3.79e-103   87210.049 - 2.41e-102   87601.795 - 4.07e-83
+WAG+R5           -43524.202   87194.404 - 6.53e-101   87200.061 - 3.55e-100   87602.684 - 2.61e-83
+WAG+F+I+G4       -43482.135   87136.269 - 2.75e-88   87144.157 -  4.9e-88   87617.256 - 1.79e-86
+WAG+F+R4         -43471.451   87122.901 - 2.19e-85   87131.554 - 2.67e-85   87626.259 - 1.98e-88
+WAG+F+R5         -43464.092   87112.184 - 4.66e-83   87121.233 - 4.66e-83   87626.728 - 1.57e-88
+VT+I+G4          -43564.031   87262.062 - 1.33e-115   87266.818 - 1.13e-114   87636.785 - 1.03e-90
+LG+R2            -43566.604   87267.208 - 1.01e-116   87271.964 - 8.65e-116   87641.931 - 7.84e-92
+VT+R4            -43558.678   87259.357 - 5.13e-115   87264.704 - 3.26e-114   87656.451 - 5.51e-95
+VT+R5            -43554.080   87254.159 - 6.9e-114   87259.816 - 3.76e-113   87662.439 - 2.76e-96
+VT+F+I+G4        -43539.216   87250.431 - 4.45e-113   87258.320 - 7.94e-113   87731.418 - 2.9e-111
+VT+F+R4          -43533.482   87246.963 - 2.52e-112   87255.616 - 3.07e-112   87750.321 - 2.28e-115
+VT+F+R5          -43528.767   87241.534 - 3.81e-111   87250.583 - 3.8e-111   87756.078 - 1.28e-116
+rtREV+I+G4       -43685.623   87505.247 - 2.07e-168   87510.002 - 1.77e-167   87879.969 - 1.6e-143
+rtREV+R4         -43676.008   87494.016 - 5.69e-166   87499.363 - 3.61e-165   87891.110 - 6.11e-146
+rtREV+R5         -43668.858   87483.717 - 9.8e-164   87489.373 - 5.34e-163   87891.996 - 3.92e-146
+JTTDCMut+I+G4    -43733.706   87601.412 - 2.72e-189   87606.167 - 2.32e-188   87976.134 - 2.1e-164
+JTT+I+G4         -43737.401   87608.801 - 6.75e-191   87613.557 - 5.77e-190   87983.524 - 5.23e-166
+JTTDCMut+R4      -43722.329   87586.658 - 4.34e-186   87592.005 - 2.76e-185   87983.752 - 4.66e-166
+JTT+R4           -43726.340   87594.680 - 7.87e-188   87600.028 -   5e-187   87991.774 - 8.45e-168
+JTTDCMut+R5      -43719.115   87584.229 - 1.46e-185   87589.886 - 7.97e-185   87992.509 - 5.85e-168
+JTT+R5           -43723.067   87592.135 - 2.81e-187   87597.791 - 1.53e-186   88000.414 - 1.12e-169
+JTTDCMut+F+I+G4  -43699.178   87570.356 - 1.51e-182   87578.245 - 2.69e-182   88051.343 - 9.8e-181
+JTTDCMut+F+R4    -43687.950   87555.900 - 2.07e-179   87564.553 - 2.52e-179   88059.259 - 1.87e-182
+JTT+F+I+G4       -43704.345   87580.691 - 8.58e-185   87588.579 - 1.53e-184   88061.678 - 5.59e-183
+JTTDCMut+F+R5    -43683.972   87551.944 - 1.5e-178   87560.993 - 1.5e-178   88066.488 - 5.04e-184
+JTT+F+R4         -43693.160   87566.319 - 1.13e-181   87574.972 - 1.38e-181   88069.678 - 1.02e-184
+JTT+F+R5         -43689.319   87562.639 - 7.14e-181   87571.688 - 7.13e-181   88077.183 - 2.4e-186
+cpREV+F+R5       -43730.087   87644.175 - 1.41e-198   87653.224 - 1.4e-198   88158.719 - 4.73e-204
+cpREV+F+R4       -43742.039   87664.077 - 6.71e-203   87672.730 - 8.16e-203   88167.436 - 6.06e-206
+cpREV+F+I+G4     -43766.655   87705.309 - 7.47e-212   87713.197 - 1.33e-211   88186.296 - 4.86e-210
+Blosum62+F+I+G4  -43773.131   87718.263 - 1.15e-214   87726.151 - 2.05e-214   88199.250 - 7.48e-213
+Blosum62+F+R4    -43765.260   87710.521 - 5.51e-213   87719.174 - 6.71e-213   88213.879 - 4.98e-216
+Blosum62+I+G4    -43853.778   87841.556 - 1.94e-241   87846.312 - 1.66e-240   88216.279 - 1.5e-216
+Blosum62+F+R5    -43761.046   87706.091 - 5.05e-212   87715.140 - 5.04e-212   88220.635 - 1.7e-217
+PMB+F+I+G4       -43785.072   87742.144 - 7.49e-220   87750.032 - 1.34e-219   88223.130 - 4.88e-218
+Blosum62+R4      -43848.009   87838.017 - 1.14e-240   87843.364 - 7.23e-240   88235.111 - 1.22e-220
+Blosum62+R5      -43843.792   87833.585 - 1.04e-239   87839.241 - 5.68e-239   88241.864 - 4.17e-222
+PMB+F+R4         -43779.348   87738.696 - 4.2e-219   87747.349 - 5.11e-219   88242.054 - 3.79e-222
+PMB+I+G4         -43869.457   87872.913 - 3.01e-248   87877.669 - 2.57e-247   88247.635 - 2.33e-223
+PMB+F+R5         -43774.972   87733.944 - 4.52e-218   87742.993 - 4.51e-218   88248.488 - 1.52e-223
+mtInv+F+R5       -43780.230   87744.461 - 2.35e-220   87753.510 - 2.35e-220   88259.005 - 7.91e-226
+mtInv+F+R4       -43790.641   87761.281 - 5.23e-224   87769.934 - 6.37e-224   88264.640 - 4.73e-227
+PMB+R4           -43865.966   87873.932 - 1.81e-248   87879.280 - 1.15e-247   88271.026 - 1.94e-228
+mtInv+F+I+G4     -43809.547   87791.094 - 1.76e-230   87798.982 - 3.14e-230   88272.080 - 1.15e-228
+PMB+R5           -43862.180   87870.360 - 1.08e-247   87876.017 - 5.87e-247   88278.640 - 4.31e-230
+Dayhoff+F+I+G4   -43834.470   87840.939 - 2.64e-241   87848.828 - 4.71e-241   88321.926 - 1.72e-239
+DCMut+F+I+G4     -43834.741   87841.483 - 2.01e-241   87849.371 - 3.59e-241   88322.470 - 1.31e-239
+Dayhoff+F+R5     -43813.738   87811.476 - 6.6e-235   87820.525 - 6.58e-235   88326.020 - 2.22e-240
+DCMut+F+R5       -43814.144   87812.289 - 4.39e-235   87821.338 - 4.39e-235   88326.833 - 1.48e-240
+Dayhoff+F+R4     -43822.912   87825.824 - 5.05e-238   87834.477 - 6.15e-238   88329.182 - 4.57e-241
+DCMut+F+R4       -43823.213   87826.426 - 3.74e-238   87835.079 - 4.55e-238   88329.784 - 3.38e-241
+cpREV+R4         -43923.257   87988.514 - 2.38e-273   87993.861 - 1.51e-272   88385.607 - 2.55e-253
+cpREV+R5         -43916.494   87978.988 - 2.78e-271   87984.644 - 1.52e-270   88387.267 - 1.11e-253
+cpREV+I+G4       -43942.598   88019.195 - 5.17e-280   88023.951 - 4.42e-279   88393.918 -   4e-255
+mtZOA+F+R5       -43905.099   87994.199 - 1.39e-274   88003.248 - 1.38e-274   88508.743 - 4.66e-280
+Dayhoff+I+G4     -44009.773   88153.546 - 3.47e-309   88158.301 - 2.96e-308   88528.268 - 2.68e-284
+DCMut+I+G4       -44011.006   88156.011 - 1.01e-309   88160.767 - 8.63e-309   88530.734 - 7.82e-285
+mtZOA+F+R4       -43925.010   88030.020 - 2.31e-282   88038.673 - 2.81e-282   88533.378 - 2.08e-285
+Dayhoff+R5       -43990.138   88126.276 - 2.89e-303   88131.933 - 1.57e-302   88534.556 - 1.16e-285
+Dayhoff+R4       -43998.169   88138.338 - 6.95e-306   88143.685 - 4.42e-305   88535.432 - 7.46e-286
+DCMut+R5         -43991.381   88128.763 - 8.34e-304   88134.419 - 4.54e-303   88537.042 - 3.34e-286
+DCMut+R4         -43999.429   88140.858 - 1.97e-306   88146.205 - 1.25e-305   88537.952 - 2.12e-286
+mtZOA+F+I+G4     -43953.544   88079.089 - 5.1e-293   88086.977 - 9.1e-293   88560.076 - 3.32e-291
+mtMet+F+R5       -44140.774   88465.548 -        0   88474.597 -        0   88980.092 -        0
+mtMet+F+R4       -44151.685   88483.370 -        0   88492.023 -        0   88986.728 -        0
+mtMet+F+I+G4     -44174.323   88520.646 -        0   88528.535 -        0   89001.633 -        0
+mtREV+F+R5       -44160.508   88505.017 -        0   88514.066 -        0   89019.561 -        0
+mtREV+F+R4       -44180.473   88540.945 -        0   88549.598 -        0   89044.303 -        0
+mtREV+F+I+G4     -44201.830   88575.661 -        0   88583.549 -        0   89056.648 -        0
+mtART+F+R5       -44310.462   88804.923 -        0   88813.973 -        0   89319.467 -        0
+mtART+F+R4       -44336.598   88853.196 -        0   88861.849 -        0   89356.554 -        0
+mtART+F+I+G4     -44362.041   88896.083 -        0   88903.971 -        0   89377.070 -        0
+LG+I             -44445.915   89023.830 -        0   89028.444 -        0   89392.959 -        0
+LG               -44638.846   89407.693 -        0   89412.166 -        0   89771.229 -        0
+FLU+F+R4         -44548.373   89276.745 -        0   89285.398 -        0   89780.104 -        0
+FLU+F+R5         -44541.503   89267.006 -        0   89276.055 -        0   89781.550 -        0
+FLU+F+I+G4       -44570.954   89313.909 -        0   89321.797 -        0   89794.895 -        0
+FLU+R5           -44754.133   89654.267 -        0   89659.923 -        0   90062.546 -        0
+FLU+R4           -44763.911   89669.822 -        0   89675.169 -        0   90066.915 -        0
+FLU+I+G4         -44782.574   89699.149 -        0   89703.905 -        0   90073.871 -        0
+HIVb+F+R5        -44708.185   89600.370 -        0   89609.419 -        0   90114.914 -        0
+HIVb+F+R4        -44722.506   89625.011 -        0   89633.664 -        0   90128.370 -        0
+HIVb+F+I+G4      -44738.390   89648.779 -        0   89656.667 -        0   90129.766 -        0
+mtVer+F+R4       -44881.155   89942.311 -        0   89950.963 -        0   90445.669 -        0
+mtVer+F+R5       -44873.584   89931.167 -        0   89940.216 -        0   90445.711 -        0
+HIVb+R5          -44954.155   90054.310 -        0   90059.967 -        0   90462.590 -        0
+HIVb+R4          -44965.932   90073.865 -        0   90079.212 -        0   90470.959 -        0
+HIVb+I+G4        -44981.430   90096.861 -        0   90101.616 -        0   90471.583 -        0
+mtVer+F+I+G4     -44913.221   89998.442 -        0   90006.331 -        0   90479.429 -        0
+mtZOA+R5         -45218.124   90582.248 -        0   90587.905 -        0   90990.528 -        0
+mtZOA+I+G4       -45251.029   90636.058 -        0   90640.814 -        0   91010.781 -        0
+mtZOA+R4         -45239.112   90620.224 -        0   90625.571 -        0   91017.318 -        0
+mtMAM+F+R5       -45239.534   90663.068 -        0   90672.118 -        0   91177.612 -        0
+mtMAM+F+R4       -45255.846   90691.693 -        0   90700.346 -        0   91195.051 -        0
+mtMAM+F+I+G4     -45289.429   90750.858 -        0   90758.746 -        0   91231.845 -        0
+mtMet+R5         -45925.322   91996.645 -        0   92002.301 -        0   92404.924 -        0
+mtMet+I+G4       -45950.219   92034.439 -        0   92039.194 -        0   92409.161 -        0
+mtMet+R4         -45936.818   92015.637 -        0   92020.984 -        0   92412.730 -        0
+mtREV+R5         -45978.626   92103.252 -        0   92108.909 -        0   92511.532 -        0
+mtREV+I+G4       -46008.818   92151.636 -        0   92156.392 -        0   92526.358 -        0
+mtREV+R4         -45995.708   92133.415 -        0   92138.762 -        0   92530.509 -        0
+mtInv+I+G4       -46060.147   92254.294 -        0   92259.050 -        0   92629.017 -        0
+mtInv+R5         -46041.920   92229.841 -        0   92235.497 -        0   92638.120 -        0
+mtInv+R4         -46052.834   92247.667 -        0   92253.015 -        0   92644.761 -        0
+mtART+R5         -46077.987   92301.974 -        0   92307.631 -        0   92710.254 -        0
+mtART+I+G4       -46114.551   92363.102 -        0   92367.858 -        0   92737.824 -        0
+mtART+R4         -46104.803   92351.607 -        0   92356.954 -        0   92748.701 -        0
+HIVw+F+R5        -46151.522   92487.045 -        0   92496.094 -        0   93001.589 -        0
+HIVw+F+R4        -46164.502   92509.004 -        0   92517.656 -        0   93012.362 -        0
+HIVw+F+I+G4      -46184.727   92541.454 -        0   92549.343 -        0   93022.441 -        0
+mtVer+R5         -46523.907   93193.814 -        0   93199.471 -        0   93602.094 -        0
+mtVer+R4         -46536.526   93215.052 -        0   93220.399 -        0   93612.146 -        0
+mtVer+I+G4       -46553.827   93241.654 -        0   93246.410 -        0   93616.377 -        0
+HIVw+R5          -46985.544   94117.088 -        0   94122.744 -        0   94525.367 -        0
+HIVw+R4          -46998.501   94139.002 -        0   94144.349 -        0   94536.096 -        0
+HIVw+I+G4        -47024.711   94183.422 -        0   94188.178 -        0   94558.145 -        0
+mtMAM+R5         -47073.452   94292.904 -        0   94298.560 -        0   94701.183 -        0
+mtMAM+R4         -47099.082   94340.164 -        0   94345.511 -        0   94737.257 -        0
+mtMAM+I+G4       -47124.648   94383.296 -        0   94388.052 -        0   94758.018 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+I+G4
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.0179
+Gamma shape alpha: 1.3116
+
+ Category  Relative_rate  Proportion
+  0         0              0.0179
+  1         0.1982         0.2455
+  2         0.5640         0.2455
+  3         1.0561         0.2455
+  4         2.2547         0.2455
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -43355.4771 (s.e. 882.9500)
+Unconstrained log-likelihood (without tree): -13551.4391
+Number of free parameters (#branches + #model parameters): 67
+Akaike information criterion (AIC) score: 86844.9542
+Corrected Akaike information criterion (AICc) score: 86849.7099
+Bayesian information criterion (BIC) score: 87219.6765
+
+Total tree length (sum of branch lengths): 20.2853
+Sum of internal branch lengths: 5.4558 (26.8952% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Myessoensis.XP_021350409.1_elongation_factor_2like' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++------------------------------------Myessoensis.XP_021350409.1_elongation_factor_2like
+|
+|                                            +-----Egranulosus.XP_024347861.1_U5_small_nuclear_ribonu
+|                                         +--| (83)
+|                                         |  |  +----Dmelanogaster.CG4849_uncharacterized_protein_Dmel_
+|                                         |  +--| (72)
+|                                         |     |     +--Myessoensis.XP_021345506.1_116_kDa_U5_small_nuclea
+|                                         |     |  +--| (100)
+|                                         |     |  |  |  +---Lanatina.XP_013419342.1_116_kDa_U5_small_nuclear_r
+|                                         |     |  |  +--| (100)
+|                                         |     |  |     +**Lanatina.XP_023933490.1_116_kDa_U5_small_nuclear_r
+|                                         |     +--| (80)
+|                                         |        |     +---Cintestinalis.LOC100175824_116_kDa_U5_small_nuclea
+|                                         |        |  +--| (67)
+|                                         |        |  |  |  +--Bbelcheri.LOC109461499_116_kDa_U5_small_nuclear_ri
+|                                         |        |  |  +--| (91)
+|                                         |        |  |     +--Aplanci.LOC110989613_116_kDa_U5_small_nuclear_ribo
+|                                         |        +--| (88)
+|                                         |           +--Hsapiens.NP_004238.3_116_kDa_U5_small_nuclear_ribo
+|                  +----------------------| (100)
+|                  |                      +---Avaga.UJR09000.1_hypothetical_protein_I4U23_013250
+|            +-----| (100)
+|            |     |                  +------------------------Egranulosus.XP_024355481.1_Elongation_factor_Tu_GT
+|            |     +------------------| (100)
+|            |                        |     +----------Avaga.UJR28421.1_hypothetical_protein_I4U23_009661
+|            |                        +-----| (98)
+|            |                              |  +--------------Dmelanogaster.CG33158_uncharacterized_protein_Dmel
+|            |                              +--| (93)
+|            |                                 |        +--------Cintestinalis.LOC100175902_elongation_factorlike_G
+|            |                                 |     +--| (92)
+|            |                                 |     |  +-------Hsapiens.NP_078856.4_elongation_factor-like_GTPase
+|            |                                 |  +--| (98)
+|            |                                 |  |  |  +-------Bbelcheri.LOC109463052_elongation_factorlike_GTPas
+|            |                                 |  |  +--| (83)
+|            |                                 |  |     +-------Aplanci.LOC110988091_elongation_factorlike_GTPase_
+|            |                                 +--| (89)
+|            |                                    |  +-----Lanatina.XP_013413557.1_elongation_factorlike_GTPa
+|            |                                    +--| (84)
+|            |                                       +-------Myessoensis.XP_021362732.1_elongation_factorlike_G
+|        +---| (87)
+|        |   +-------------Avaga.UJR26319.1_hypothetical_protein_I4U23_007657
+|     +--| (84)
+|     |  +----------Myessoensis.XP_021349219.1_elongation_factor_2like
+|  +--| (52)
+|  |  +--Hsapiens.NP_001952.1_elongation_factor_2
++--| (19)
+|  |     +-----------------Avaga.UJR19151.1_hypothetical_protein_I4U23_022281
+|  |  +--| (74)
+|  |  |  |  +**Avaga.UJR10301.1_hypothetical_protein_I4U23_014507
+|  |  |  +--| (100)
+|  |  |     +**Avaga.UJR35689.1_hypothetical_protein_I4U23_028438
+|  +--| (73)
+|     +--Dmelanogaster.eEF2_eukaryotic_translation_elongati
+|
+|        +-------Egranulosus.XP_024354781.1_Elongation_factor_2
+|     +--| (89)
+|     |  |  +----Myessoensis.XP_021362159.1_elongation_factor_2like
+|     |  +--| (85)
+|     |     +---Lanatina.XP_013394736.1_elongation_factor_2
+|  +--| (97)
+|  |  |  +--Cintestinalis.LOC100177993_elongation_factor_2like
+|  |  +--| (100)
+|  |     +--Cintestinalis.LOC100178953_LOW_QUALITY_PROTEIN_elo
++--| (57)
+   |  +--Bbelcheri.LOC109464429_elongation_factor_2like
+   +--| (53)
+      +--Aplanci.LOC110987647_elongation_factor_2like
+
+Tree in newick format:
+
+(Myessoensis.XP_021350409.1_elongation_factor_2like:2.1788308976,(((((((Egranulosus.XP_024347861.1_U5_small_nuclear_ribonu:0.3817749063,(Dmelanogaster.CG4849_uncharacterized_protein_Dmel_:0.3017778732,((Myessoensis.XP_021345506.1_116_kDa_U5_small_nuclea:0.2088058853,(Lanatina.XP_013419342.1_116_kDa_U5_small_nuclear_r:0.2443772391,Lanatina.XP_023933490.1_116_kDa_U5_small_nuclear_r:0.0000029674)100:0.1275001455)100:0.0609187532,((Cintestinalis.LOC100175824_116_kDa_U5_small_nuclea:0.2545237305,(Bbelcheri.LOC109461499_116_kDa_U5_small_nuclear_ri:0.1390152438,Aplanci.LOC110989613_116_kDa_U5_small_nuclear_ribo:0.1341087793)91:0.0398420130)67:0.0228198292,Hsapiens.NP_004238.3_116_kDa_U5_small_nuclear_ribo:0.1665219224)88:0.0337490199)80:0.0465675331)72:0.0390990124)83:0.0753911041,Avaga.UJR09000.1_hypothetical_protein_I4U23_013250:0.2518044535)100:1.3893488690,(Egranulosus.XP_024355481.1_Elongation_factor_Tu_GT:1.4648203757,(Avaga.UJR28421.1_hypothetical_protein_I4U23_009661:0.6879302075,(Dmelanogaster.CG33158_uncharacterized_protein_Dmel:0.8951032061,(((Cintestinalis.LOC100175902_elongation_factorlike_G:0.5370048333,Hsapiens.NP_078856.4_elongation_factor-like_GTPase:0.4744363168)92:0.0878991345,(Bbelcheri.LOC109463052_elongation_factorlike_GTPas:0.4727550723,Aplanci.LOC110988091_elongation_factorlike_GTPase_:0.4829453728)83:0.0580227482)98:0.0933278025,(Lanatina.XP_013413557.1_elongation_factorlike_GTPa:0.3746088343,Myessoensis.XP_021362732.1_elongation_factorlike_G:0.4957171815)84:0.0730412676)89:0.0798446569)93:0.1614027103)98:0.3832601486)100:1.1295066850)100:0.3890490075,Avaga.UJR26319.1_hypothetical_protein_I4U23_007657:0.8736646604)87:0.2708906366,Myessoensis.XP_021349219.1_elongation_factor_2like:0.6833619369)84:0.1863327503,Hsapiens.NP_001952.1_elongation_factor_2:0.1354815089)52:0.0433347833,((Avaga.UJR19151.1_hypothetical_protein_I4U23_022281:1.0840756072,(Avaga.UJR10301.1_hypothetical_protein_I4U23_014507:0.0000010005,Avaga.UJR35689.1_hypothetical_protein_I4U23_028438:0.0000010005)100:0.0740007042)74:0.0983848419,Dmelanogaster.eEF2_eukaryotic_translation_elongati:0.2078675401)73:0.0569231147)19:0.0249201293,(((Egranulosus.XP_024354781.1_Elongation_factor_2:0.5166902910,(Myessoensis.XP_021362159.1_elongation_factor_2like:0.3120809192,Lanatina.XP_013394736.1_elongation_factor_2:0.2828302500)85:0.0718620891)89:0.0590659139,(Cintestinalis.LOC100177993_elongation_factor_2like:0.0890719261,Cintestinalis.LOC100178953_LOW_QUALITY_PROTEIN_elo:0.0828499255)100:0.2177364024)97:0.0899636600,(Bbelcheri.LOC109464429_elongation_factor_2like:0.1877956594,Aplanci.LOC110987647_elongation_factor_2like:0.1529264227)53:0.0391923383)57:0.0065794560);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -43357.393392
+Robinson-Foulds distance between ML tree and consensus tree: 2
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++------------------------------------Myessoensis.XP_021350409.1_elongation_factor_2like
+|
+|                                            +-----Egranulosus.XP_024347861.1_U5_small_nuclear_ribonu
+|                                         +--| (83)
+|                                         |  |  +----Dmelanogaster.CG4849_uncharacterized_protein_Dmel_
+|                                         |  +--| (72)
+|                                         |     |     +--Myessoensis.XP_021345506.1_116_kDa_U5_small_nuclea
+|                                         |     |  +--| (100)
+|                                         |     |  |  |  +---Lanatina.XP_013419342.1_116_kDa_U5_small_nuclear_r
+|                                         |     |  |  +--| (100)
+|                                         |     |  |     +--Lanatina.XP_023933490.1_116_kDa_U5_small_nuclear_r
+|                                         |     +--| (80)
+|                                         |        |     +---Cintestinalis.LOC100175824_116_kDa_U5_small_nuclea
+|                                         |        |  +--| (67)
+|                                         |        |  |  |  +--Bbelcheri.LOC109461499_116_kDa_U5_small_nuclear_ri
+|                                         |        |  |  +--| (91)
+|                                         |        |  |     +--Aplanci.LOC110989613_116_kDa_U5_small_nuclear_ribo
+|                                         |        +--| (88)
+|                                         |           +--Hsapiens.NP_004238.3_116_kDa_U5_small_nuclear_ribo
+|                  +----------------------| (100)
+|                  |                      +---Avaga.UJR09000.1_hypothetical_protein_I4U23_013250
+|            +-----| (100)
+|            |     |                  +------------------------Egranulosus.XP_024355481.1_Elongation_factor_Tu_GT
+|            |     +------------------| (100)
+|            |                        |     +----------Avaga.UJR28421.1_hypothetical_protein_I4U23_009661
+|            |                        +-----| (98)
+|            |                              |  +--------------Dmelanogaster.CG33158_uncharacterized_protein_Dmel
+|            |                              +--| (93)
+|            |                                 |        +--------Cintestinalis.LOC100175902_elongation_factorlike_G
+|            |                                 |     +--| (92)
+|            |                                 |     |  +-------Hsapiens.NP_078856.4_elongation_factor-like_GTPase
+|            |                                 |  +--| (98)
+|            |                                 |  |  |  +-------Bbelcheri.LOC109463052_elongation_factorlike_GTPas
+|            |                                 |  |  +--| (83)
+|            |                                 |  |     +-------Aplanci.LOC110988091_elongation_factorlike_GTPase_
+|            |                                 +--| (89)
+|            |                                    |  +-----Lanatina.XP_013413557.1_elongation_factorlike_GTPa
+|            |                                    +--| (84)
+|            |                                       +-------Myessoensis.XP_021362732.1_elongation_factorlike_G
+|        +---| (87)
+|        |   +-------------Avaga.UJR26319.1_hypothetical_protein_I4U23_007657
+|     +--| (84)
+|     |  +----------Myessoensis.XP_021349219.1_elongation_factor_2like
+|  +--| (52)
+|  |  +--Hsapiens.NP_001952.1_elongation_factor_2
++--| (28)
+|  |        +-------Egranulosus.XP_024354781.1_Elongation_factor_2
+|  |     +--| (89)
+|  |     |  |  +----Myessoensis.XP_021362159.1_elongation_factor_2like
+|  |     |  +--| (85)
+|  |     |     +---Lanatina.XP_013394736.1_elongation_factor_2
+|  |  +--| (97)
+|  |  |  |  +--Cintestinalis.LOC100177993_elongation_factor_2like
+|  |  |  +--| (100)
+|  |  |     +--Cintestinalis.LOC100178953_LOW_QUALITY_PROTEIN_elo
+|  +--| (57)
+|     |  +--Bbelcheri.LOC109464429_elongation_factor_2like
+|     +--| (53)
+|        +--Aplanci.LOC110987647_elongation_factor_2like
+|
+|     +-----------------Avaga.UJR19151.1_hypothetical_protein_I4U23_022281
+|  +--| (74)
+|  |  |  +--Avaga.UJR10301.1_hypothetical_protein_I4U23_014507
+|  |  +--| (100)
+|  |     +--Avaga.UJR35689.1_hypothetical_protein_I4U23_028438
++--| (73)
+   +--Dmelanogaster.eEF2_eukaryotic_translation_elongati
+
+
+Consensus tree in newick format: 
+
+(Myessoensis.XP_021350409.1_elongation_factor_2like:2.1926516889,(((((((Egranulosus.XP_024347861.1_U5_small_nuclear_ribonu:0.3820236383,(Dmelanogaster.CG4849_uncharacterized_protein_Dmel_:0.3019569865,((Myessoensis.XP_021345506.1_116_kDa_U5_small_nuclea:0.2088520141,(Lanatina.XP_013419342.1_116_kDa_U5_small_nuclear_r:0.2444862436,Lanatina.XP_023933490.1_116_kDa_U5_small_nuclear_r:0.0000022330)100:0.1276198646)100:0.0609343178,((Cintestinalis.LOC100175824_116_kDa_U5_small_nuclea:0.2546348083,(Bbelcheri.LOC109461499_116_kDa_U5_small_nuclear_ri:0.1390856967,Aplanci.LOC110989613_116_kDa_U5_small_nuclear_ribo:0.1341837172)91:0.0399006001)67:0.0228257769,Hsapiens.NP_004238.3_116_kDa_U5_small_nuclear_ribo:0.1666319919)88:0.0337631563)80:0.0465874891)72:0.0391108837)83:0.0756259932,Avaga.UJR09000.1_hypothetical_protein_I4U23_013250:0.2518157295)100:1.3902959362,(Egranulosus.XP_024355481.1_Elongation_factor_Tu_GT:1.4659951036,(Avaga.UJR28421.1_hypothetical_protein_I4U23_009661:0.6882209478,(Dmelanogaster.CG33158_uncharacterized_protein_Dmel:0.8954236060,(((Cintestinalis.LOC100175902_elongation_factorlike_G:0.5373523521,Hsapiens.NP_078856.4_elongation_factor-like_GTPase:0.4747942323)92:0.0879094170,(Bbelcheri.LOC109463052_elongation_factorlike_GTPas:0.4730282919,Aplanci.LOC110988091_elongation_factorlike_GTPase_:0.4832652725)83:0.0580436032)98:0.0933664636,(Lanatina.XP_013413557.1_elongation_factorlike_GTPa:0.3748108950,Myessoensis.XP_021362732.1_elongation_factorlike_G:0.4961139320)84:0.0730997330)89:0.0801813588)93:0.1613825465)98:0.3830872855)100:1.1328660149)100:0.3899209346,Avaga.UJR26319.1_hypothetical_protein_I4U23_007657:0.8721932119)87:0.2713737331,Myessoensis.XP_021349219.1_elongation_factor_2like:0.6846570941)84:0.1852178912,Hsapiens.NP_001952.1_elongation_factor_2:0.1365580774)52:0.0436117241,(((Egranulosus.XP_024354781.1_Elongation_factor_2:0.5168250857,(Myessoensis.XP_021362159.1_elongation_factor_2like:0.3118003213,Lanatina.XP_013394736.1_elongation_factor_2:0.2832237205)85:0.0729521380)89:0.0594399553,(Cintestinalis.LOC100177993_elongation_factor_2like:0.0891881101,Cintestinalis.LOC100178953_LOW_QUALITY_PROTEIN_elo:0.0828709964)100:0.2172124794)97:0.0902963634,(Bbelcheri.LOC109464429_elongation_factor_2like:0.1881713459,Aplanci.LOC110987647_elongation_factor_2like:0.1531028294)53:0.0370628840)57:0.0322634146)28:0.0000022405,((Avaga.UJR19151.1_hypothetical_protein_I4U23_022281:1.0847553553,(Avaga.UJR10301.1_hypothetical_protein_I4U23_014507:0.0000029659,Avaga.UJR35689.1_hypothetical_protein_I4U23_028438:0.0000029659)100:0.0742830906)74:0.0978812899,Dmelanogaster.eEF2_eukaryotic_translation_elongati:0.2079442843)73:0.0581678575);
+
+TIME STAMP
+----------
+
+Date and time: Sun Sep 25 05:11:17 2022
+Total CPU time used: 251.682652 seconds (0h:4m:11s)
+Total wall-clock time used: 126.5076289 seconds (0h:2m:6s)
+
