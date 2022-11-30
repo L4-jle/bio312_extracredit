@@ -10,8 +10,6 @@ In examining the possible gene losses that may have shifted homolog function wit
   * [Methods and Procedure](#methods-and-procedure)
   * [Conclusion](#conclusion)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 ## Introduction
 
 Among all three domains of life, protein synthesis is highly conserved and is directed by the complex protein-assembling machinery of ribosomes.
