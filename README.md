@@ -17,6 +17,7 @@ Among all three domains of life, protein synthesis is highly conserved and is di
 The EFL1, or the elongation factor-like GTPase 1 protein, is among one of the key players in ribosome synthesis, being inherently crucial in removing an anti-association factor eFI6 that leads to the full maturation of the large 60S subunit of the ribosomal body. EFL1 contains five structural domains, with domain II providing an insertion site for a variable length of amino acids that separates it from EF-2 translocases -- an important distinction for function.
 
 ![](https://i.imgur.com/zWanYoD.png)
+
 (Asano et al. 2013)
 
 It plays a major role in the etiology of SDS, or Schwann-Diamond syndrome, and is of interest to elucidate the phylogenetic relationship of EFL1 amongst orthologs within varying species, in order to deduce why some orthologs of EFL1 are species-specific at domain II within the protein’s architecture. In other words, did significant gene loss contribute to the loss of SBDS interaction among EFL1 orthologs?
