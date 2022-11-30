@@ -244,6 +244,6 @@ Some considerations to keep in mind:
 
 2. In further viewing the Pfam domains, an R script written by Joshua Rest, PhD, was used. 
 
-3. E-values for this experiment are only specific to the EFL1 protein family. Any other target family will require adjusted, if needed, in order to capture the scope of the study.
+3. E-values for this experiment are only specific to the EFL1 protein family. Any other target family will require adjustment, if needed, in order to capture the scope of the study.
 
 
