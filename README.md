@@ -4,7 +4,13 @@ In examining the possible gene losses that may have shifted homolog function wit
 
 ## Table of Contents
 
-[TOC]
+- [Gene loss among Eukarya that led to disjoint EFL1 ortholog function among species](#gene-loss-among-eukarya-that-led-to-disjoint-efl1-ortholog-function-among-species)
+  * [Table of Contents](#table-of-contents)
+  * [Introduction](#introduction)
+  * [Methods and Procedure](#methods-and-procedure)
+  * [Conclusion](#conclusion)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Introduction
 
@@ -21,7 +27,7 @@ In order to explore this question, the procedure below was used to uncover where
 
 Methods and Procedure
 ---
-**Using BLAST to find EFL1 homologs**
+**1. Using BLAST to find EFL1 homologs**
 
 First, create a database in which the BLAST search with be performed and download the NCBI FASTA formatted file of target gene ```XP_021362732.1```
 
@@ -62,7 +68,7 @@ M. yessoensis 5
 ```
 Be sure to check if the display shows the number of similar homologs among the nine species explored in this study, as presented above.
 
-**Using MUSCLE alignment to deduce sequence percent identity**
+**2. Using MUSCLE alignment to deduce sequence percent identity**
 
 Using [seqkit](https://bioinf.shenwei.me/seqkit/), which is an ultrafast FASTA toolkit, to obtain the sequences in the selected FASTA protein file, and then view the output.
 
@@ -108,7 +114,7 @@ It is also wise to compare that percent identity with another calculation from a
 alignbuddy -pi ~/labs/lab4-$MYGIT/efl1/efl1.homologs.al.fas | awk ' (NR>2)  { for (i=2;i<=NF  ;i++){ sum+=$i;num++} }
      END{ print(100*sum/num) } '
 ```
-**Constructing the Phylogenetic tree for EFL1 homologs Using Sequence Data**
+**3. Constructing the Phylogenetic tree for EFL1 homologs Using Sequence Data**
 
 [IQ-TREE](http://www.iqtree.org/) is a phylogenetic tree building algorithm that infers trees using maximum-likelihood. It will compile this data by choosing the most appropriate model, composed of three parts.
 
@@ -133,7 +139,7 @@ Since the output from using IQ-TREE will be in the ```.iqtree``` format, the tre
 ```
 Rscript --vanilla ~/labs/lab5-$MYGIT/plotUnrooted.R  ~/labs/lab5-$MYGIT/efl1/efl1.homologs.al.fas.treefile ~/labs/lab5-$MYGIT/efl1/efl1.homologs.al.fas.treefile.pdf 0.4
 ```
-**Midpoint root the optimal phylogenetic tree using gotree**
+**4. Midpoint root the optimal phylogenetic tree using gotree**
 
 Oftentimes, it is sensible to root the earliest divergence point of the homologs of interest by using [gotree](https://github.com/evolbioinfo/gotree), a set a commandline tools written in [Go](https://go.dev/).
 
@@ -147,7 +153,7 @@ nw_order -c n ~/labs/lab5-$MYGIT/efl1/efl1.homologs.al.mid.treefile  | nw_displa
 ```
 > Note: ```nw_order``` will order the clades by the descendent number, allowing the output tree to look cleaner and easily readable. 
 
-**Using NOTUNG to reconcile the EFL1 gene family**
+**5. Using NOTUNG to reconcile the EFL1 gene family**
 
 Sometimes, it is necessary to reconcile gene and species trees, due to the nature of many duplication and loss events that may have happened in its evolutionary history. [NOTUNG](http://www.cs.cmu.edu/~durand/Notung/) is a gene tree-species reconciliation software that estimates these duplication and loss events using a parsimony-based approach. 
 
@@ -182,7 +188,7 @@ python2.7 ~/tools/recPhyloXML/python/NOTUNGtoRecPhyloXML.py -g ~/labs/lab6-$MYGI
 thirdkind -Iie -D 40 -f ~/labs/lab6-$MYGIT/gqr/gqr.homologs.al.mid.treefile.reconciled.xml -o  ~/labs/lab6-$MYGIT/gqr/gqr.homologs.al.mid.treefile.reconciled.svg
 ```
 
-**Using RPS-BLAST to identify protein domains with Pfam**
+**6. Using RPS-BLAST to identify protein domains with Pfam**
 
 [RPS-BLAST](https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd_help.shtml#RPSBWhat) is a specialized version of BLAST, in which it stands for "Reverse Position-Specific BLAST." Essentially, RPS-BLAST will use the query sequence to search backwards from the query to the subject, as opposed to BLAST which does the opposite. 
 
@@ -198,16 +204,48 @@ To run RPS-BLAST on the target protein ddomain, use this command. Note: The e-va
 rpsblast -query ~/labs/lab8-$MYGIT/efl1/efl1.homologs.fas -db ~/data/Pfam -out ~/labs/lab8-$MYGIT/efl1/efl1.rps-blast.out  -outfmt "6 qseqid qlen qstart qend evalue stitle" -evalue .0000000001
 ```
 
-User flows
----
+In order to view the predicted Pfam domains of the phylogeny, it is necessary to incorporate two programs, [ggtree](https://guangchuangyu.github.io/software/ggtree/) and [drawProteins](https://www.bioconductor.org/packages/devel/bioc/vignettes/drawProteins/inst/doc/drawProteins_BiocStyle.html), in order to plot the pfam domains that was searched using RPS-BLAST.
 
+The following command line has an element written in [R](https://www.r-project.org/) and involves several key elements.
 
-Project Timeline
----
+1. ```sudo```: gives permission as computer administrator to install packages
+2. ```--vanilla```: a commmand flag used to not restore a previous workspace environment
+3. ```plotTreeAndDomains.r```: cited from Dr. Joshua Rest, PhD. It defines the boundaries of the output.
 
+**7. Viewing the predicted Pfam domains at length**
 
-## Appendix
+Using this command, it is possible to view more detailed annotations of the target gene:
 
+```
+mlr --inidx --ifs "\t" --opprint  cat ~/labs/lab8-$MYGIT/efl1/efl1.rps-blast.out | tail -n +2 | less -S
+```
+In order to view the distribution of Pfam domains, use this command, that counts the domains automatically:
 
-###### tags: `Templates` `Documentation`
+```
+cut -f 1 ~/labs/lab8-$MYGIT/efl1/efl1.rps-blast.out | sort | uniq -c
+```
+
+If needed, in order to view the domain with the greatest number of residues, use this command line:
+
+```
+awk '{a=$4-$3;print $1,'\t',a;}' ~/labs/lab8-$MYGIT/gqr/gqr.rps-blast.out |  sort  -k2nr
+```
+
+Using the ```sort``` command, which will order the results depending on the user-set values, use to command line to find the domain with the most optimal e-value:
+
+```
+sort  -k5rg ~/labs/lab8-$MYGIT/efl1/efl1.rps-blast.out | less -S
+```
+
+## Conclusion
+If followed thoroughly, the work flow outline is repeatable and may be applied to other gene families of interest. 
+
+Some considerations to keep in mind:
+
+1. This is a user-profile centered work flow; to repeat this procedure, be sure to appropriately create directories, as shown above, in a personal GitHub account.
+
+2. In further viewing the Pfam domains, an R script written by Joshua Rest, PhD, was used. 
+
+3. E-values for this experiment are only specific to the EFL1 protein family. Any other target family will require adjusted, if needed, in order to capture the scope of the study.
+
 
